@@ -14,6 +14,10 @@
   <p align="center">Home Page</p>
 </div>
 
+###### ****** This is not my original project. I just use this material to learning 
+###### ****** to create cicd and deploy container to EKS cluster via ArgoCD
+###### ****** All of AWS infra are created by Terraform
+
 # **Youtube Video for step by step Demonstration!**
 [![Video Tutorial](https://img.youtube.com/vi/g8X5AoqCJHc/0.jpg)](https://youtu.be/g8X5AoqCJHc)
 
