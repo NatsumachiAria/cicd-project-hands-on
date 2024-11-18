@@ -1,0 +1,36 @@
+Jenkins setting up
+
+1. How to get jenkins admin password
+
+    #sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+
+2. Install suggested plug-in and wait for minutes
+
+3. Install Necessary Plugins in Jenkins:
+
+    Goto Manage Jenkins →Plugins → Available Plugins →
+
+    Install below plugins
+
+        3.1 Eclipse Temurin Installer (Install without restart)
+
+        3.2 SonarQube Scanner (Install without restart)
+
+        3.3 NodeJs Plugin (Install Without restart)
+
+        3.4 Email Extension Plugin
+
+4. Configure Java and Nodejs in Global Tool Configuration
+    Goto Manage Jenkins → Tools → Install JDK(17) and NodeJs(16)→ Click on Apply and Save
+    
+    - jdk > Name : jdk17 ******* Name must be the same as pipeline
+            Install from adoptium.net > version : 17.0.8.1 + 1
+
+    - nodejs > Name : node16
+               Install from nodejs.org > version : 16.2.0
+
+5. Create credential to connecting with SonarQube
+    - Manage Jenkins > Credentials > global > Add credentials
+      Kind : Secret text
+      Secret : Use token from SonarQube Admin
+      ID : Sonar-token

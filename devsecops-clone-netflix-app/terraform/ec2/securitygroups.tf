@@ -3,7 +3,7 @@ resource "aws_security_group" "test-public-zone-sg" {
   vpc_id = data.terraform_remote_state.dev-vpc.outputs.dev_vpc_id
 
   ingress = [
-    for port in [22, 80, 443, 8080, 9000, 3000] : {
+    for port in [22, 80, 443, 3000, 8080, 8081, 9000, 9090] : {
       description      = "inbound rules"
       from_port        = port
       to_port          = port

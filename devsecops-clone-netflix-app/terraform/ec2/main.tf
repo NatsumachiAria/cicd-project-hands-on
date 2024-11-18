@@ -1,4 +1,4 @@
-resource "aws_instance" "public-instance" {
+resource "aws_instance" "public-instance_1" {
   ami                         = var.ami_id
   instance_type               = var.instance_type
   iam_instance_profile        = aws_iam_instance_profile.ec2_instance_profile.name
@@ -6,7 +6,7 @@ resource "aws_instance" "public-instance" {
   subnet_id                   = data.terraform_remote_state.dev-vpc.outputs.public_subnet[0]
   vpc_security_group_ids      = [aws_security_group.test-public-zone-sg.id]
   availability_zone           = var.ap-southeast-1-azs[0]
-  user_data                   = file("install.sh")
+  user_data                   = file("install-jenkins-sonar.sh")
 
   root_block_device {
     volume_size = 40
@@ -14,6 +14,25 @@ resource "aws_instance" "public-instance" {
 
   tags = {
     Name = "Jenkins-SonarQube"
+  }
+}
+
+resource "aws_instance" "public-instance_2" {
+  ami                         = var.ami_id
+  instance_type               = var.instance_type
+  iam_instance_profile        = aws_iam_instance_profile.ec2_instance_profile.name
+  associate_public_ip_address = true
+  subnet_id                   = data.terraform_remote_state.dev-vpc.outputs.public_subnet[0]
+  vpc_security_group_ids      = [aws_security_group.test-public-zone-sg.id]
+  availability_zone           = var.ap-southeast-1-azs[0]
+  user_data                   = file("install-prometheus-grafana.sh")
+
+  root_block_device {
+    volume_size = 40
+  }
+
+  tags = {
+    Name = "prometheus-grafana"
   }
 }
 

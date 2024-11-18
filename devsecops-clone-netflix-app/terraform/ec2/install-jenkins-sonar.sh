@@ -11,6 +11,7 @@ sudo apt-get update -y
 sudo apt-get install jenkins -y
 sudo systemctl start jenkins
 sudo systemctl status jenkins
+sudo cat /var/jenkins_home/secrets/initialAdminPassword > /home/ubuntu/jenkinspass.txt
 
 ##Install Docker and Run SonarQube as Container
 sudo apt-get update
