@@ -11,7 +11,7 @@ sudo mv consoles/ console_libraries/ /etc/prometheus/
 sudo mv prometheus.yml /etc/prometheus/prometheus.yml
 sudo chown -R prometheus:prometheus /etc/prometheus/ /data/
 sudo touch /etc/systemd/system/prometheus.service
-sudo cat << EOF > prometheus.service
+sudo cat << EOF > /etc/systemd/system/prometheus.service
 [Unit]
 Description=Prometheus
 Wants=network-online.target
@@ -48,7 +48,7 @@ tar -xvf node_exporter-1.6.1.linux-amd64.tar.gz
 sudo mv node_exporter-1.6.1.linux-amd64/node_exporter /usr/local/bin/
 rm -rf node_exporter*
 sudo touch /etc/systemd/system/node_exporter.service
-sudo cat << EOF > node_exporter.service
+sudo cat << EOF > /etc/systemd/system/node_exporter.service
 [Unit]
 Description=Node Exporter
 Wants=network-online.target

@@ -34,7 +34,7 @@ resource "aws_instance" "public-instance_2" {
   tags = {
     Name = "prometheus-grafana"
   }
-}
+} 
 
 resource "aws_iam_role" "ec2_role" {
   name = "ec2-ssm-role"

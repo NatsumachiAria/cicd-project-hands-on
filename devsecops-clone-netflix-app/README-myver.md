@@ -4,6 +4,4 @@ For study and practice only.
 
 There is no other purpose.
 
-Project "devsecops-clone-netflix-app" - infra is not done yet.
-
-bash script don't run correctly.
+Project "devsecops-clone-netflix-app" - infra is done except EKS cluster.

@@ -1,0 +1,7 @@
+Default password admin admin
+
+1. Create token to using with Jenkins
+   - Go to "Administration" tab > Security > Users > Administration > token > \
+     Generate token name : jenkins > generate
+
+2. Copy token to set jenkins credential

@@ -34,3 +34,15 @@ Jenkins setting up
       Kind : Secret text
       Secret : Use token from SonarQube Admin
       ID : Sonar-token
+
+6. Set SonarQube-server
+    - Manage Jenkins > System > SonarQube servers
+      Name : sonar-server
+      Server URL : IP:9000
+      Server authentication token : Sonar-token
+
+7. Install SSonarQube Scanner
+    - Manage Jenkins > Tools > SonarQube Scanner installations 
+      Name : sonar-scannner
+      Leave the rest as default setting
+      Apply & Save

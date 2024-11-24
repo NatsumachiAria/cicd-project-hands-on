@@ -16,7 +16,7 @@ variable "env-prefix" {
 
 variable "my_ip" {
   type    = string
-  default = "124.120.246.18/32"
+  default = "124.120.254.148/32"
 }
 
 variable "instance_type" {
