@@ -19,6 +19,16 @@ variable "my_ip" {
   default = "124.120.254.148/32"
 }
 
+variable "jenkins_ip" {
+  type = string
+  default = "10.0.10.212/32"
+}
+
+variable "prometheus_ip" {
+  type = string
+  default = "10.0.10.237/32"
+}
+
 variable "instance_type" {
   default = "t2.large"
 }

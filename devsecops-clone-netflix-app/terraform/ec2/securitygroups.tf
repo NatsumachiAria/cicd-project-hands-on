@@ -8,7 +8,7 @@ resource "aws_security_group" "test-public-zone-sg" {
       from_port        = port
       to_port          = port
       protocol         = "tcp"
-      cidr_blocks      = [var.my_ip]
+      cidr_blocks      = [var.my_ip, var.jenkins_ip, var.prometheus_ip]
       ipv6_cidr_blocks = []
       prefix_list_ids  = []
       security_groups  = []
