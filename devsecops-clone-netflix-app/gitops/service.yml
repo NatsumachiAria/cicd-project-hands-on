@@ -12,7 +12,8 @@ spec:
 #    nodePort: 30007
   type: LoadBalancer
   ports:
-  - port: 80
-    targetPort: 30007
+    - protocol: TCP
+      port: 80
+      targetPort: 30007
   selector:
     app: netflix-app
