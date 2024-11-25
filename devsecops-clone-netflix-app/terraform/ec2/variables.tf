@@ -16,17 +16,19 @@ variable "env-prefix" {
 
 variable "my_ip" {
   type    = string
-  default = "124.120.254.148/32"
+  default = "124.120.251.186/32"
 }
 
 variable "jenkins_ip" {
   type = string
-  default = "10.0.10.212/32"
+  default = "10.0.10.94/32"
+  //default = aws_instance.public-instance_1.private_ip
 }
 
 variable "prometheus_ip" {
   type = string
-  default = "10.0.10.237/32"
+  default = "10.0.10.214/32"
+  //default = aws_instance.public-instance_2.private_ip
 }
 
 variable "instance_type" {
